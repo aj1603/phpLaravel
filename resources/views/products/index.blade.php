@@ -12,21 +12,21 @@
     </div>
 
     <div class="my-3 text-center">
-        <h4>Tabela de produtos</h4>
+        <h4>Table of products</h4>
     </div>
 
     <div class="my-3 d-flex justify-content-between">
-        <a href="{{ route('categories.index') }}" class="btn btn-info text-white ">Ir para categorias</a>        
-        <a class="btn btn-success" href="{{ route('products.create') }}"> Criar Produto</a>
+        <a href="{{ route('categories.index') }}" class="btn btn-info text-white ">Categories</a>        
+        <a class="btn btn-success" href="{{ route('products.create') }}"> Product create</a>
     </div>
 
     <table class="table rounded-3 shadow-sm">
           <thead class="bg-secondary border border-bottom border-secondary text-white">
               <tr>
                 <th scope="col">ID</th>
-                <th scope="col">NOME</th>
-                <th scope="col">PREÇO</th>
-                <th scope="col">CATEGORIA</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">category</th>
                 <th scope="col"></th>
               </tr>
           </thead>
@@ -39,14 +39,16 @@
 
                   <td> {{ $product->name }}</td>
                   <td> {{ $product->price }}</td>
-                  <td> {{ $product->category->name }}</td>
+                  <td> {{ $product->category_name }}</td>
+
+                  
 
                   <td class="w-25">
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Editar</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Excluir</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                   </td>
 

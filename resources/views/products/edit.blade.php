@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="my-1 text-center">
-        <h3>Editar Produto</h3>
+        <h3>Product update</h3>
     </div>
 
     @if (session('status'))
@@ -17,16 +17,16 @@
             @csrf
             @method('PUT')
             <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Nome Produto" value="{{ $product->name }}">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Product name" value="{{ $product->name }}">
                 @error('name')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-3">
-                <label for="name" class="form-label">Preços</label>
-                <input type="text" class="form-control" id="price" name="price" placeholder="Preço" value="{{ $product->price }}">
+                <label for="name" class="form-label">Price</label>
+                <input type="text" class="form-control" id="price" name="price" placeholder="Price" value="{{ $product->price }}">
 
                 @error('price')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -34,10 +34,10 @@
             </div>
 
             <div class="mb-3">
-                <label for="name" class="form-label">Categoria</label>
+                <label for="name" class="form-label">Categories</label>
                 <!--<input type="text" class="form-control" id="id_category" name="id_category" placeholder="Preço"> -->
                 <select class="form-select" name="id_category">
-                    <option selected disabled>Selecionar categoria</option>
+                    <option selected disabled>Choose Category</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
@@ -51,8 +51,8 @@
             </div>
 
             <div class="text-end">
-                <a class="btn btn-secondary" href="{{ route('products.index') }}" enctype="multipart/form-data">Voltar</a>                
-                <button type="submit" class="btn btn-primary">Editar</button>
+                <a class="btn btn-secondary" href="{{ route('products.index') }}" enctype="multipart/form-data">Cancel</a>                
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </form>
     </div>

@@ -16,7 +16,7 @@
     </div>
 
     <div class="my-3 d-flex justify-content-between">
-        <a href="{{ route('products.index') }}" class="btn btn-info text-white ">Product create</a>
+        <a href="{{ route('products.index') }}" class="btn btn-info text-white ">Products</a>
 
         <a class="btn btn-success" href="{{ route('categories.create') }}"> Category create</a>
     </div>

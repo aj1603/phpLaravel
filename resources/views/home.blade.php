@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
+    <title>Laravel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -22,11 +22,11 @@
                         <div class="d-flex justify-content-center text-center">
                             <div class="w-50 my-3">
                                 <div class="text-center my-5">
-                                    <h4>Para visualizar a tabela da sua preferencia clique no botão abaixo:</h4>
+                                    <h4>Categories and Products</h4>
                                 </div>
                                 <div class="d-flex justify-content-around">
-                                    <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Ir para categorias</a>        
-                                    <a href="{{ route('products.index') }}" class="btn btn-lg btn-secondary">Ir para produtos</a>
+                                    <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Categories</a>        
+                                    <a href="{{ route('products.index') }}" class="btn btn-lg btn-secondary">Products</a>
                                 </div>
                             </div>
                         </div>
