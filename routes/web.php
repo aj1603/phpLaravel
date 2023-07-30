@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
+
+Route::resource('categories', CategoryController::class);
+
+Route::resource('products', ProductController::class);
 Route::get('/hi', function () {
     return ('welcome');
 });
