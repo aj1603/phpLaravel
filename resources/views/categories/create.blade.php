@@ -22,6 +22,13 @@
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="sname" class="form-label">Sec_name</label>
+                <input type="text" class="form-control" id="sname" name="sname" placeholder="Category sec name">
+                @error('sname')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                @enderror
+            </div>
 
             <div class="text-end">
                 <a class="btn btn-secondary" href="{{ route('categories.index') }}" enctype="multipart/form-data">Cancel</a>                
