@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/hihi', function () {
     return view('home');
 });
 
@@ -62,4 +62,13 @@ Route::get('/salam', function () {
 
 Route::get('/uzat', function () {
     return response()->json(["mesage"=>"Sussumy basyar"]);
+});
+
+
+Route::get('search/{search}',function($search){
+    echo 'search: '.$search;
+});
+
+Route::get('/user/{name?}',function($name = 'Virat'){
+    echo "Name: ".$name;
 });
